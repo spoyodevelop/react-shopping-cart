@@ -350,7 +350,7 @@ Please change the parent <Route path="${c}"> to <Route path="${c==="/"?"*":`${c}
   font-weight: 800;
   font-size: 20px;
   color: #ffffff;
-`;function jv(){return C.jsx(tp,{children:C.jsx("a",{href:"./",children:C.jsx($v,{children:"SHOP"})})})}const Fv=L.main`
+`;function jv(){return C.jsx(tp,{children:C.jsx("a",{href:"/",children:C.jsx($v,{children:"SHOP"})})})}const Fv=L.main`
   display: flex;
   max-width: 430px;
   width: 100%;
