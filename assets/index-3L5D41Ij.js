@@ -448,7 +448,7 @@ Error generating stack: `+o.message+`
           height: 50px;
           border: 5px solid ${Et.overlayLight};
         `}}}
-`,Wd=({size:e="medium"})=>S.jsx(oy,{"data-testid":"loading-spinner",children:S.jsx(ly,{size:e})});function ay({imageUrl:e}){const[t,n]=g.useState("loading"),[r,i]=g.useState(e),o=g.useMemo(()=>window.location.hostname.includes("github.io")?"/react-shopping-carts/":"",[]),l=u=>u?u.startsWith("http://")||u.startsWith("https://"):!1,a=`${o}/fallback_image.png`;return g.useEffect(()=>{if(!l(e)){n("error"),i(a);return}if(typeof window>"u")return;const u=new Image;u.src=e,u.onload=()=>{n("loaded"),i(e)},u.onerror=()=>{n("error"),i(a)}},[e,a]),t==="loading"?S.jsx(Wd,{size:"medium"}):t==="error"?S.jsx(Gs,{src:a,alt:"Fallback Image"}):S.jsx(Gs,{src:r,alt:"Product Image"})}const Gs=R.img`
+`,Wd=({size:e="medium"})=>S.jsx(oy,{"data-testid":"loading-spinner",children:S.jsx(ly,{size:e})});function ay({imageUrl:e}){const[t,n]=g.useState("loading"),[r,i]=g.useState(e),o=g.useMemo(()=>window.location.hostname.includes("github.io")?"/react-shopping-carts/":"",[]),l=u=>u?u.startsWith("http://")||u.startsWith("https://"):!1,a=`${o}fallback_image.png`;return g.useEffect(()=>{if(!l(e)){n("error"),i(a);return}if(typeof window>"u")return;const u=new Image;u.src=e,u.onload=()=>{n("loaded"),i(e)},u.onerror=()=>{n("error"),i(a)}},[e,a]),t==="loading"?S.jsx(Wd,{size:"medium"}):t==="error"?S.jsx(Gs,{src:a,alt:"Fallback Image"}):S.jsx(Gs,{src:r,alt:"Product Image"})}const Gs=R.img`
   position: relative;
   width: 80px;
   height: 80px;
