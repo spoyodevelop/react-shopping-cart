@@ -559,53 +559,7 @@ Please change the parent <Route path="${c}"> to <Route path="${c==="/"?"*":`${c}
   height: 80px;
   border-radius: 8px;
   display: block;
-`;function F1({cartItem:e,isSelected:t,handleDeleteCartItem:n,handleCartItemQuantity:r,handleSelectCartItem:i}){const{product:o,quantity:l,id:a}=e,{name:s,price:u,imageUrl:d}=o,[p,h]=y.useState(!1),w=()=>{h(!0),r({id:a,quantity:l+1}).finally(()=>{h(!1)})},x=()=>{h(!0),r({id:a,quantity:l-1}).finally(()=>{h(!1)})};return m.jsx("li",{children:m.jsxs(S1,{children:[m.jsxs(k1,{children:[m.jsx(Ho,{id:`select-checkbox-${s}-${a}`,checked:t,onChange:()=>i(a),label:s,boxSize:"small",hidden:!0}),m.jsx(C1,{disabled:p,onClick:()=>n(a),"data-testid":`delete-button-${a}`,children:"삭제"})]}),m.jsxs(E1,{children:[m.jsx(zp,{imageUrl:d}),m.jsxs(P1,{children:[m.jsx(R1,{children:s}),m.jsxs(_1,{children:[u.toLocaleString(),"원"]}),m.jsx(w1,{quantity:l,handleIncreaseCartItemQuantity:w,handleDecreaseCartItemQuantity:x,isQuantityUpdateLoading:p})]})]})]})})}const Ip=({children:e})=>m.jsx(e1,{children:e}),Mp=()=>{const{cartFetchLoading:e}=Wn();return e?m.jsx(l1,{children:m.jsx($p,{size:"large"})}):null},Dp=()=>{const{cartItemsData:e,isAllSelected:t,handleSelectAllCartItems:n}=Wn();return m.jsxs(m.Fragment,{children:[m.jsx(t1,{children:"장바구니"}),e.length!==0?m.jsxs(m.Fragment,{children:[m.jsxs(n1,{children:["현재 ",e.length,"종류의 상품이 담겨있습니다."]}),m.jsx(r1,{children:m.jsx(Ho,{id:"select-all-checkbox",checked:t,onChange:n,label:"전체선택",boxSize:"medium"})})]}):null]})},Fp=()=>{const{cartItemsData:e,subtotalPrice:t}=Wn();return e.length===0?m.jsx(o1,{children:"장바구니에 담긴 상품이 없습니다."}):m.jsx(m1,{subtotalPrice:t,children:m.jsx(A1,{})})},A1=()=>{const{cartItemsData:e,handleDeleteCartItem:t,handleCartItemQuantity:n,handleSelectCartItem:r,selectedCartIds:i}=Wn();return m.jsx(m.Fragment,{children:e.filter(o=>o.product.quantity>0).map(o=>m.jsx(F1,{cartItem:o,handleDeleteCartItem:t,handleCartItemQuantity:n,handleSelectCartItem:r,isSelected:i.has(o.id)},o.id))})};function Tt(){return m.jsxs(Ip,{children:[m.jsx(Mp,{}),m.jsx(Dp,{}),m.jsx(Fp,{})]})}Tt.Root=Ip;Tt.Loading=Mp;Tt.Header=Dp;Tt.Items=Fp;const U1=S.div`
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-`,B1=S.ul`
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  min-width: 380px;
-  width: 100%;
-`;function H1({children:e}){return m.jsx(U1,{children:m.jsx(B1,{children:e})})}const W1=S.div`
-  width: 100%;
-  padding: 12px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  border-top: 1px solid #0000001a;
-`;S.div`
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-`;S.img`
-  width: 80px;
-  height: 80px;
-
-  border-radius: 8px;
-`;const V1=S.div`
-  width: 100%;
-  display: flex;
-  gap: 16px;
-`,Q1=S.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-`,K1=S.p`
-  font-size: 0.75rem;
-  font-weight: 500;
-`,Y1=S.p`
-  font-weight: 700;
-  font-size: 1.25rem;
-  margin-bottom: 8px;
-`;S.p`
-  font-size: 0.75rem;
-  font-weight: 500;
-`;function b1({cartItem:e}){const{product:t,quantity:n,id:r}=e,{name:i,price:o,imageUrl:l}=t;return m.jsx("li",{children:m.jsx(W1,{children:m.jsxs(V1,{children:[m.jsx(zp,{imageUrl:l}),m.jsxs(Q1,{children:[m.jsx(K1,{children:i}),m.jsxs(Y1,{children:[o.toLocaleString(),"원"]}),m.jsxs("span",{style:{fontSize:"0.75rem",fontWeight:"500"},children:[n,"개"]})]})]})})},r)}S.button`
+`;function F1({cartItem:e,isSelected:t,handleDeleteCartItem:n,handleCartItemQuantity:r,handleSelectCartItem:i}){const{product:o,quantity:l,id:a}=e,{name:s,price:u,imageUrl:d}=o,[p,h]=y.useState(!1),w=()=>{h(!0),r({id:a,quantity:l+1}).finally(()=>{h(!1)})},x=()=>{h(!0),r({id:a,quantity:l-1}).finally(()=>{h(!1)})};return m.jsx("li",{children:m.jsxs(S1,{children:[m.jsxs(k1,{children:[m.jsx(Ho,{id:`select-checkbox-${s}-${a}`,checked:t,onChange:()=>i(a),label:s,boxSize:"small",hidden:!0}),m.jsx(C1,{disabled:p,onClick:()=>n(a),"data-testid":`delete-button-${a}`,children:"삭제"})]}),m.jsxs(E1,{children:[m.jsx(zp,{imageUrl:d}),m.jsxs(P1,{children:[m.jsx(R1,{children:s}),m.jsxs(_1,{children:[u.toLocaleString(),"원"]}),m.jsx(w1,{quantity:l,handleIncreaseCartItemQuantity:w,handleDecreaseCartItemQuantity:x,isQuantityUpdateLoading:p})]})]})]})})}const Ip=({children:e})=>m.jsx(e1,{children:e}),Mp=()=>{const{cartFetchLoading:e}=Wn();return e?m.jsx(l1,{children:m.jsx($p,{size:"large"})}):null},Dp=()=>{const{cartItemsData:e,isAllSelected:t,handleSelectAllCartItems:n}=Wn();return m.jsxs(m.Fragment,{children:[m.jsx(t1,{children:"장바구니"}),e.length!==0?m.jsxs(m.Fragment,{children:[m.jsxs(n1,{children:["현재 ",e.length,"종류의 상품이 담겨있습니다."]}),m.jsx(r1,{children:m.jsx(Ho,{id:"select-all-checkbox",checked:t,onChange:n,label:"전체선택",boxSize:"medium"})})]}):null]})},Fp=()=>{const{cartItemsData:e,subtotalPrice:t}=Wn();return e.length===0?m.jsx(o1,{children:"장바구니에 담긴 상품이 없습니다."}):m.jsx(m1,{subtotalPrice:t,children:m.jsx(A1,{})})},A1=()=>{const{cartItemsData:e,handleDeleteCartItem:t,handleCartItemQuantity:n,handleSelectCartItem:r,selectedCartIds:i}=Wn();return m.jsx(m.Fragment,{children:e.filter(o=>o.product.quantity>0).map(o=>m.jsx(F1,{cartItem:o,handleDeleteCartItem:t,handleCartItemQuantity:n,handleSelectCartItem:r,isSelected:i.has(o.id)},o.id))})};function Tt(){return m.jsxs(Ip,{children:[m.jsx(Mp,{}),m.jsx(Dp,{}),m.jsx(Fp,{})]})}Tt.Root=Ip;Tt.Loading=Mp;Tt.Header=Dp;Tt.Items=Fp;const U1=({onNext:e})=>{const{selectedCartItems:t}=Wn();return m.jsx(i1,{disabled:t.length===0,onClick:e,children:"주문 확인"})};S.button`
   width: 100%;
   max-width: 430px;
   background-color: #000000;
@@ -644,15 +598,15 @@ Please change the parent <Route path="${c}"> to <Route path="${c==="/"?"*":`${c}
   color: #222222;
   border: 1px solid #aaaaaa;
   margin: 16px 0;
-`,X1=S.header`
+`,B1=S.header`
   width: 100%;
   margin-bottom: 20px;
   margin-top: 20px;
-`,G1=S.h2`
+`,H1=S.h2`
   font-weight: 700;
   font-size: 24px;
   margin-bottom: 8px;
-`,J1=S.p`
+`,W1=S.p`
   font-weight: 500;
   font-size: 12px;
   span {
@@ -678,11 +632,11 @@ Please change the parent <Route path="${c}"> to <Route path="${c==="/"?"*":`${c}
   display: flex;
   justify-content: space-between;
   color: #333333;
-`;const Z1=S.span`
+`;const V1=S.span`
   font-size: 16px;
   font-weight: 600;
   color: #333333;
-`,q1=S.span`
+`,Q1=S.span`
   font-size: 20px;
   font-weight: 700;
 `;S.p`
@@ -691,15 +645,15 @@ Please change the parent <Route path="${c}"> to <Route path="${c==="/"?"*":`${c}
   padding: 12px 0;
   border-top: 1px solid #0000001a;
   border-bottom: 1px solid #0000001a;
-`;const ex=S.span`
+`;const K1=S.span`
   font-size: 16px;
   font-weight: 600;
   color: #333333;
-`,tx=S.span`
+`,Y1=S.span`
   font-size: 20px;
   font-weight: 700;
   color: #333333;
-`,nx=S.ul`
+`,b1=S.ul`
   border-top: 1px solid #0000001a;
 
   border-bottom: 1px solid #0000001a;
@@ -714,67 +668,113 @@ Please change the parent <Route path="${c}"> to <Route path="${c==="/"?"*":`${c}
   display: flex;
   justify-content: space-between;
   align-items: center;
-`,rx=S.p`
+`,X1=S.p`
   display: flex;
   justify-content: space-between;
   padding: 12px 0;
-`,ix=S.p`
+`,G1=S.p`
   font-size: 1rem;
   color: #333333;
   margin-top: 8px;
   margin-bottom: 16px;
   font-weight: 700;
   text-align: center;
-`,ox=S.div`
+`,J1=S.div`
   margin-bottom: 8px;
-`,lx=S.h2`
+`,Z1=S.h2`
   font-size: 18px;
   font-weight: 700;
-`,ax=S.p`
+`,q1=S.p`
   font-size: 12px;
   font-weight: 400;
-`,sx=S.div`
+`,ex=S.div`
   display: flex;
   align-items: flex-end;
   gap: 8px;
   margin-top: 8px;
   margin-bottom: 24px;
-`,ux=S.div`
+`,tx=S.div`
   margin-bottom: 96px;
-`,cx=S.div`
+`,nx=S.div`
   max-width: 380px;
   margin: 0 auto;
-`,fx=S.div`
+`,rx=S.div`
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+`,ix=S.ul`
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  min-width: 380px;
+  width: 100%;
+`;function ox({children:e}){return m.jsx(rx,{children:m.jsx(ix,{children:e})})}const lx=S.div`
+  width: 100%;
+  padding: 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-top: 1px solid #0000001a;
+`;S.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+`;S.img`
+  width: 80px;
+  height: 80px;
+
+  border-radius: 8px;
+`;const ax=S.div`
+  width: 100%;
+  display: flex;
+  gap: 16px;
+`,sx=S.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+`,ux=S.p`
+  font-size: 0.75rem;
+  font-weight: 500;
+`,cx=S.p`
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+`;S.p`
+  font-size: 0.75rem;
+  font-weight: 500;
+`;function fx({cartItem:e}){const{product:t,quantity:n,id:r}=e,{name:i,price:o,imageUrl:l}=t;return m.jsx("li",{children:m.jsx(lx,{children:m.jsxs(ax,{children:[m.jsx(zp,{imageUrl:l}),m.jsxs(sx,{children:[m.jsx(ux,{children:i}),m.jsxs(cx,{children:[o.toLocaleString(),"원"]}),m.jsxs("span",{style:{fontSize:"0.75rem",fontWeight:"500"},children:[n,"개"]})]})]})})},r)}const dx=S.div`
   display: flex;
   flex-direction: column;
   width: 100%;
   z-index: ${Bs.modal};
-`,dx=S.ul`
+`,px=S.ul`
   list-style: none;
   display: flex;
   flex-direction: column;
   border-top: 1px solid #0000001a;
   gap: 16px;
-`,px=S.div`
+`,hx=S.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
   height: 24px;
   line-height: 1;
   margin-bottom: 12px;
-`,hx=S.div`
+`,mx=S.div`
   display: flex;
   width: 100%;
   gap: 4px;
   align-items: center;
-`,mx=S.img`
+`,gx=S.img`
   width: 16px;
   height: 16px;
-`,gx=S.p`
+`,yx=S.p`
   color: #333333;
   font-size: 12px;
   font-weight: 600;
-`;function yx({children:e}){return m.jsxs(fx,{children:[m.jsx(px,{children:m.jsxs(hx,{children:[m.jsx(mx,{src:As}),m.jsxs(gx,{children:["쿠폰은 최대 ",Pa,"개까지 사용할수 있습니다."]})]})}),m.jsx(dx,{children:e})]})}const vx=S.div`
+`;function vx({children:e}){return m.jsxs(dx,{children:[m.jsx(hx,{children:m.jsxs(mx,{children:[m.jsx(gx,{src:As}),m.jsxs(yx,{children:["쿠폰은 최대 ",Pa,"개까지 사용할수 있습니다."]})]})}),m.jsx(px,{children:e})]})}const xx=S.div`
   width: 100%;
   padding: 12px 0;
   display: flex;
@@ -787,7 +787,7 @@ Please change the parent <Route path="${c}"> to <Route path="${c==="/"?"*":`${c}
     opacity: 0.4;
     pointer-events: none;
   `}
-`,xx=S.div`
+`,wx=S.div`
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
@@ -797,24 +797,24 @@ Please change the parent <Route path="${c}"> to <Route path="${c==="/"?"*":`${c}
   font-size: 1.25rem;
   margin: 0;
   line-height: 1;
-`;const wx=S.p`
+`;const Sx=S.p`
   font-size: 1rem;
   font-weight: 700;
   margin: 0;
   line-height: 1;
-`,Sx=S.p`
+`,kx=S.p`
   font-size: 0.7rem;
   span {
     display: block;
   }
-`;function kx({coupon:e,onSelect:t,isSelected:n,isLimitReached:r,isInvalid:i}){const{expirationDate:o,description:l}=e,a=new Date,s=new Date;let u="";if(e.availableTime){const h=Number(e.availableTime.start.split(":")[0]),w=Number(e.availableTime.end.split(":")[0]);a.setHours(h,0,0,0),s.setHours(w,0,0,0),u=a.getHours()<12?"오전":"오후"}const d=i||r&&!n,p=d?!1:n;return m.jsxs(vx,{disabled:d,children:[m.jsxs(xx,{children:[m.jsx(Ho,{id:`select-checkbox-coupon-${e.id}`,checked:p,onChange:()=>t(e.id),label:`${e.code} 쿠폰 선택`,boxSize:"medium",hidden:!0,disabled:d}),m.jsx(wx,{children:l})]}),m.jsxs(Sx,{children:[o&&m.jsxs("span",{children:["만료일: ",new Date(o).toLocaleDateString("ko-KR")]}),(e==null?void 0:e.minimumAmount)&&m.jsxs("span",{children:["최소 주문 금액: ",e.minimumAmount.toLocaleString(),"원"]}),(e==null?void 0:e.availableTime)&&m.jsxs("span",{children:["사용 가능 시간: ",u," ",a.getHours(),"시부터 ~"," ",s.getHours(),"시까지"]})]})]})}const Hs=y.createContext(null);function Cx(e,t){y.useEffect(()=>{if(!t)return;const n=e.current;if(!n)return;const r=document.activeElement,i=Array.from(n.querySelectorAll('a[href], button, input, select, textarea, [tabindex]:not([tabindex="-1"])')),o=i[0],l=i[i.length-1];if(i.length===0){n.setAttribute("tabindex","-1"),n.focus();return}o.focus();const a=s=>{s.key==="Tab"&&s.shiftKey&&document.activeElement===o?(s.preventDefault(),l==null||l.focus()):s.key==="Tab"&&!s.shiftKey&&document.activeElement===l&&(s.preventDefault(),o==null||o.focus())};return n.addEventListener("keydown",a),()=>{n.removeEventListener("keydown",a),r==null||r.focus()}},[e.current,t])}function Ex(e,t){y.useEffect(()=>{if(!e)return;const n=r=>{r.key==="Escape"&&t()};return document.addEventListener("keydown",n),()=>{document.removeEventListener("keydown",n)}},[e,t])}const Px=Ao`
+`;function Cx({coupon:e,onSelect:t,isSelected:n,isLimitReached:r,isInvalid:i}){const{expirationDate:o,description:l}=e,a=new Date,s=new Date;let u="";if(e.availableTime){const h=Number(e.availableTime.start.split(":")[0]),w=Number(e.availableTime.end.split(":")[0]);a.setHours(h,0,0,0),s.setHours(w,0,0,0),u=a.getHours()<12?"오전":"오후"}const d=i||r&&!n,p=d?!1:n;return m.jsxs(xx,{disabled:d,children:[m.jsxs(wx,{children:[m.jsx(Ho,{id:`select-checkbox-coupon-${e.id}`,checked:p,onChange:()=>t(e.id),label:`${e.code} 쿠폰 선택`,boxSize:"medium",hidden:!0,disabled:d}),m.jsx(Sx,{children:l})]}),m.jsxs(kx,{children:[o&&m.jsxs("span",{children:["만료일: ",new Date(o).toLocaleDateString("ko-KR")]}),(e==null?void 0:e.minimumAmount)&&m.jsxs("span",{children:["최소 주문 금액: ",e.minimumAmount.toLocaleString(),"원"]}),(e==null?void 0:e.availableTime)&&m.jsxs("span",{children:["사용 가능 시간: ",u," ",a.getHours(),"시부터 ~"," ",s.getHours(),"시까지"]})]})]})}const Hs=y.createContext(null);function Ex(e,t){y.useEffect(()=>{if(!t)return;const n=e.current;if(!n)return;const r=document.activeElement,i=Array.from(n.querySelectorAll('a[href], button, input, select, textarea, [tabindex]:not([tabindex="-1"])')),o=i[0],l=i[i.length-1];if(i.length===0){n.setAttribute("tabindex","-1"),n.focus();return}o.focus();const a=s=>{s.key==="Tab"&&s.shiftKey&&document.activeElement===o?(s.preventDefault(),l==null||l.focus()):s.key==="Tab"&&!s.shiftKey&&document.activeElement===l&&(s.preventDefault(),o==null||o.focus())};return n.addEventListener("keydown",a),()=>{n.removeEventListener("keydown",a),r==null||r.focus()}},[e.current,t])}function Px(e,t){y.useEffect(()=>{if(!e)return;const n=r=>{r.key==="Escape"&&t()};return document.addEventListener("keydown",n),()=>{document.removeEventListener("keydown",n)}},[e,t])}const Rx=Ao`
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
   }
-`,Rx=S.div`
+`,_x=S.div`
   position: fixed;
   display: flex;
   top: 0;
@@ -822,11 +822,11 @@ Please change the parent <Route path="${c}"> to <Route path="${c==="/"?"*":`${c}
   width: 100vw;
   height: 100vh;
   background-color: ${Ke.overlayLight};
-  animation: ${Px} 0.3s ease-in-out;
+  animation: ${Rx} 0.3s ease-in-out;
   justify-content: center;
   align-items: ${e=>e.position==="center"?"center":"end"};
   z-index: ${Bs.modal};
-`;function _x({children:e,...t}){const n=y.useContext(Hs);if(!n)throw new Error("ModalContext는 ModalProvider 안에 있어야 합니다.");return m.jsx(Rx,{...t,id:"modal-background",position:n.position,onClick:r=>{r.target===r.currentTarget&&n.onClose()},children:e})}const lr=Ao`
+`;function Tx({children:e,...t}){const n=y.useContext(Hs);if(!n)throw new Error("ModalContext는 ModalProvider 안에 있어야 합니다.");return m.jsx(_x,{...t,id:"modal-background",position:n.position,onClick:r=>{r.target===r.currentTarget&&n.onClose()},children:e})}const lr=Ao`
   from {
     transform: scale(0.95);
     opacity: 0;
@@ -835,7 +835,7 @@ Please change the parent <Route path="${c}"> to <Route path="${c==="/"?"*":`${c}
     transform: scale(1);
     opacity: 1;
   }
-`,Tx=e=>{switch(e){case"full":return wn`
+`,jx=e=>{switch(e){case"full":return wn`
         width: 100%;
         animation: ${lr} 0.3s ease-in-out;
       `;case"small":return wn`
@@ -847,7 +847,7 @@ Please change the parent <Route path="${c}"> to <Route path="${c==="/"?"*":`${c}
       `;case"large":return wn`
         min-width: min(800px, 95vw);
         animation: ${lr} 0.3s ease-in-out;
-      `;default:return null}},jx=S.div`
+      `;default:return null}},Nx=S.div`
   padding: 32px;
   background: ${Ke.white};
   color: ${Ke.black};
@@ -862,8 +862,8 @@ Please change the parent <Route path="${c}"> to <Route path="${c==="/"?"*":`${c}
   animation: ${lr} 0.3s ease-in-out;
 
   /* size별 추가 스타일 */
-  ${e=>Tx(e.size)}
-`,Nx=S.img`
+  ${e=>jx(e.size)}
+`,Lx=S.img`
   position: absolute;
   top: 20px;
   right: 20px;
@@ -878,17 +878,17 @@ Please change the parent <Route path="${c}"> to <Route path="${c==="/"?"*":`${c}
   &:active {
     transform: scale(0.9);
   }
-`,Lx="/react-shopping-cart/closeIcon.png";function Ox({children:e,size:t="medium",...n}){const r=y.useContext(Hs),i=(r==null?void 0:r.position)==="bottom"?"full":t;return m.jsxs(jx,{...n,id:"modal-container",size:i,onClick:o=>o.stopPropagation(),role:"dialog","aria-modal":"true",children:[m.jsx(Nx,{id:"modal-close-button",src:Lx,alt:"닫기",onClick:r==null?void 0:r.onClose}),e]})}const $x=S.header`
+`,Ox="/react-shopping-cart/closeIcon.png";function $x({children:e,size:t="medium",...n}){const r=y.useContext(Hs),i=(r==null?void 0:r.position)==="bottom"?"full":t;return m.jsxs(Nx,{...n,id:"modal-container",size:i,onClick:o=>o.stopPropagation(),role:"dialog","aria-modal":"true",children:[m.jsx(Lx,{id:"modal-close-button",src:Ox,alt:"닫기",onClick:r==null?void 0:r.onClose}),e]})}const zx=S.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-`,zx=S.div`
+`,Ix=S.div`
   position: relative;
 `;S.button`
   &:hover {
     cursor: pointer;
   }
-`;const Ix=S.h2`
+`;const Mx=S.h2`
   font-family: "Noto Sans KR";
   font-weight: 700;
   font-size: 18px;
@@ -900,11 +900,11 @@ Please change the parent <Route path="${c}"> to <Route path="${c==="/"?"*":`${c}
   vertical-align: middle;
   width: fit-content;
   white-space: nowrap;
-`;function Mx({children:e,...t}){return m.jsx(zx,{id:"modal-header",children:m.jsx($x,{...t,"aria-labelledby":"modal-title",children:m.jsx(Ix,{id:"modal-title",children:e})})})}const Dx=S.div`
+`;function Dx({children:e,...t}){return m.jsx(Ix,{id:"modal-header",children:m.jsx(zx,{...t,"aria-labelledby":"modal-title",children:m.jsx(Mx,{id:"modal-title",children:e})})})}const Fx=S.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-`;function Fx({children:e,...t}){return m.jsx(Dx,{...t,children:e})}function ut({isOpen:e,onClose:t,position:n="center",children:r}){const i=y.useRef(null);return Cx(i,e),Ex(e,t),e?ws.createPortal(m.jsx("div",{ref:i,children:m.jsx(Hs.Provider,{value:{onClose:t,position:n},children:r})}),document.body):null}ut.Background=_x;ut.Container=Ox;ut.Header=Mx;ut.Content=Fx;const Ap=y.createContext(null),Wo=()=>{const e=y.useContext(Ap);if(!e)throw new Error("OrderConfirmation 컴포넌트 내에서만 사용할 수 있습니다.");return e};function Qe({selectedCartItems:e,couponsData:t,result:n,couponSelection:r,children:i}){const[o,l]=y.useState(!1),a=y.useMemo(()=>t==null?void 0:t.filter(u=>!jp(u,e).isValid),[t,e]),s={selectedCartItems:e,couponsData:t,result:n,couponSelection:r,invalidCoupons:a,isModalOpen:o,setIsModalOpen:l};return m.jsx(Ap.Provider,{value:s,children:m.jsx(cx,{children:i})})}function Ax(){const{selectedCartItems:e}=Wo(),t=e.reduce((n,r)=>n+r.quantity,0);return m.jsxs(X1,{children:[m.jsx(G1,{children:"주문 확인"}),m.jsxs(J1,{children:[m.jsxs("span",{children:["총 ",e.length,"종류의 상품 ",t,"개를 주문합니다."]}),m.jsx("span",{children:"최종 결제 금액을 확인해주세요."})]})]})}function Ux(){const{selectedCartItems:e}=Wo();return m.jsx(H1,{children:e.map(t=>m.jsx(b1,{cartItem:t},t.id))})}function Bx({children:e}){const{couponsData:t,result:n,couponSelection:r,invalidCoupons:i,isModalOpen:o,setIsModalOpen:l}=Wo(),{handleSelectCoupon:a,selectedCouponIds:s,isSelectedToLimit:u}=r;return m.jsxs(m.Fragment,{children:[m.jsx(ut,{isOpen:o,onClose:()=>l(!1),position:"center",children:m.jsx(ut.Background,{children:m.jsxs(ut.Container,{size:"small",position:"center",children:[m.jsx(ut.Header,{children:"쿠폰을 선택해 주세요."}),m.jsxs(ut.Content,{children:[m.jsx(yx,{children:t==null?void 0:t.map(d=>{const p=!!(s!=null&&s.has(d.id)),h=!p&&u;return m.jsx(kx,{coupon:d,onSelect:a,isSelected:p,isLimitReached:h,isInvalid:i==null?void 0:i.some(w=>w.id===d.id)},d.id)})}),m.jsx(ix,{children:"🏷️ 자동으로 가장 큰 할인 금액의 쿠폰이 적용됩니다!"}),m.jsxs(Pc,{onClick:()=>l(!1),children:["총 ",n.discountTotal.toLocaleString(),"원 할인쿠폰 사용하기"]})]})]})})}),e||m.jsx(Pc,{onClick:()=>l(!0),children:"쿠폰 적용"})]})}function Hx(){const[e,t]=y.useState(!1);return m.jsxs(ox,{children:[m.jsx(lx,{children:"배송 정보"}),m.jsxs(sx,{children:[m.jsx(Ho,{id:"isInIsland",checked:e,onChange:()=>t(!e),label:"제주도 및 도서 산간 지역",hidden:!0}),m.jsx(ax,{children:"제주도 및 도서 산간 지역"})]}),m.jsxs(Np,{children:[m.jsx(Lp,{src:As}),m.jsxs(Op,{children:["총 주문 금액이 ",Mn.toLocaleString(),"원 이상일 경우 무료 배송됩니다."]})]})]})}function Wx(){const{result:e}=Wo();return m.jsxs(ux,{children:[m.jsxs(nx,{children:[m.jsxs(El,{children:[m.jsx(Rc,{children:"총 결제 금액"}),m.jsxs(_c,{children:[e.orderTotal.toLocaleString(),"원"]})]}),m.jsxs(El,{children:[m.jsx(Z1,{children:"쿠폰 할인 금액"}),m.jsxs(q1,{children:["-",e.discountTotal.toLocaleString(),"원"]})]}),m.jsxs(El,{children:[m.jsx(Rc,{children:"배송비"}),m.jsxs(_c,{children:[e.shippingFee.toLocaleString(),"원"]})]})]}),m.jsxs(rx,{children:[m.jsx(ex,{children:"총 결제 금액"}),m.jsxs(tx,{children:[e.finalTotal.toLocaleString(),"원"]})]})]})}Qe.Header=Ax;Qe.ItemList=Ux;Qe.CouponSelection=Bx;Qe.ShippingIsland=Hx;Qe.PriceDetails=Wx;const Vx=S.button`
+`;function Ax({children:e,...t}){return m.jsx(Fx,{...t,children:e})}function ut({isOpen:e,onClose:t,position:n="center",children:r}){const i=y.useRef(null);return Ex(i,e),Px(e,t),e?ws.createPortal(m.jsx("div",{ref:i,children:m.jsx(Hs.Provider,{value:{onClose:t,position:n},children:r})}),document.body):null}ut.Background=Tx;ut.Container=$x;ut.Header=Dx;ut.Content=Ax;const Ap=y.createContext(null),Wo=()=>{const e=y.useContext(Ap);if(!e)throw new Error("OrderConfirmation 컴포넌트 내에서만 사용할 수 있습니다.");return e};function Qe({selectedCartItems:e,couponsData:t,result:n,couponSelection:r,children:i}){const[o,l]=y.useState(!1),a=y.useMemo(()=>t==null?void 0:t.filter(u=>!jp(u,e).isValid),[t,e]),s={selectedCartItems:e,couponsData:t,result:n,couponSelection:r,invalidCoupons:a,isModalOpen:o,setIsModalOpen:l};return m.jsx(Ap.Provider,{value:s,children:m.jsx(nx,{children:i})})}function Ux(){const{selectedCartItems:e}=Wo(),t=e.reduce((n,r)=>n+r.quantity,0);return m.jsxs(B1,{children:[m.jsx(H1,{children:"주문 확인"}),m.jsxs(W1,{children:[m.jsxs("span",{children:["총 ",e.length,"종류의 상품 ",t,"개를 주문합니다."]}),m.jsx("span",{children:"최종 결제 금액을 확인해주세요."})]})]})}function Bx(){const{selectedCartItems:e}=Wo();return m.jsx(ox,{children:e.map(t=>m.jsx(fx,{cartItem:t},t.id))})}function Hx({children:e}){const{couponsData:t,result:n,couponSelection:r,invalidCoupons:i,isModalOpen:o,setIsModalOpen:l}=Wo(),{handleSelectCoupon:a,selectedCouponIds:s,isSelectedToLimit:u}=r;return m.jsxs(m.Fragment,{children:[m.jsx(ut,{isOpen:o,onClose:()=>l(!1),position:"center",children:m.jsx(ut.Background,{children:m.jsxs(ut.Container,{size:"small",position:"center",children:[m.jsx(ut.Header,{children:"쿠폰을 선택해 주세요."}),m.jsxs(ut.Content,{children:[m.jsx(vx,{children:t==null?void 0:t.map(d=>{const p=!!(s!=null&&s.has(d.id)),h=!p&&u;return m.jsx(Cx,{coupon:d,onSelect:a,isSelected:p,isLimitReached:h,isInvalid:i==null?void 0:i.some(w=>w.id===d.id)},d.id)})}),m.jsx(G1,{children:"🏷️ 자동으로 가장 큰 할인 금액의 쿠폰이 적용됩니다!"}),m.jsxs(Pc,{onClick:()=>l(!1),children:["총 ",n.discountTotal.toLocaleString(),"원 할인쿠폰 사용하기"]})]})]})})}),e||m.jsx(Pc,{onClick:()=>l(!0),children:"쿠폰 적용"})]})}function Wx(){const[e,t]=y.useState(!1);return m.jsxs(J1,{children:[m.jsx(Z1,{children:"배송 정보"}),m.jsxs(ex,{children:[m.jsx(Ho,{id:"isInIsland",checked:e,onChange:()=>t(!e),label:"제주도 및 도서 산간 지역",hidden:!0}),m.jsx(q1,{children:"제주도 및 도서 산간 지역"})]}),m.jsxs(Np,{children:[m.jsx(Lp,{src:As}),m.jsxs(Op,{children:["총 주문 금액이 ",Mn.toLocaleString(),"원 이상일 경우 무료 배송됩니다."]})]})]})}function Vx(){const{result:e}=Wo();return m.jsxs(tx,{children:[m.jsxs(b1,{children:[m.jsxs(El,{children:[m.jsx(Rc,{children:"총 결제 금액"}),m.jsxs(_c,{children:[e.orderTotal.toLocaleString(),"원"]})]}),m.jsxs(El,{children:[m.jsx(V1,{children:"쿠폰 할인 금액"}),m.jsxs(Q1,{children:["-",e.discountTotal.toLocaleString(),"원"]})]}),m.jsxs(El,{children:[m.jsx(Rc,{children:"배송비"}),m.jsxs(_c,{children:[e.shippingFee.toLocaleString(),"원"]})]})]}),m.jsxs(X1,{children:[m.jsx(K1,{children:"총 결제 금액"}),m.jsxs(Y1,{children:[e.finalTotal.toLocaleString(),"원"]})]})]})}Qe.Header=Ux;Qe.ItemList=Bx;Qe.CouponSelection=Hx;Qe.ShippingIsland=Wx;Qe.PriceDetails=Vx;const Qx=S.button`
   width: 100%;
   max-width: 430px;
   position: fixed;
@@ -935,7 +935,7 @@ Please change the parent <Route path="${c}"> to <Route path="${c==="/"?"*":`${c}
     background-color: rgb(105, 105, 105);
     cursor: not-allowed;
   }
-`;function Qx({selectedCartItems:e,finalPrice:t}){const n=Eo(),r=()=>{n($r.ORDER_COMPLETE,{state:{selectedCartItems:e,finalPrice:t}})};return m.jsx(Vx,{disabled:e.length===0,onClick:r,children:"결제하기"})}const Kx=({onNext:e})=>{const{selectedCartItems:t}=Wn();return m.jsx(i1,{disabled:t.length===0,onClick:e,children:"주문 확인"})},Yx="/react-shopping-cart/goBack.svg",bx=S.button`
+`;function Kx({selectedCartItems:e,finalPrice:t}){const n=Eo(),r=()=>{n($r.ORDER_COMPLETE,{state:{selectedCartItems:e,finalPrice:t}})};return m.jsx(Qx,{disabled:e.length===0,onClick:r,children:"결제하기"})}const Yx="/react-shopping-cart/goBack.svg",bx=S.button`
   padding: 0;
   border: 0;
   background-color: transparent;
@@ -944,7 +944,7 @@ Please change the parent <Route path="${c}"> to <Route path="${c==="/"?"*":`${c}
 `,Xx=S.img`
   width: 32px;
   height: 32px;
-`;function Gx({handleGoBackToHomeButton:e}){return m.jsx(Ms,{children:m.jsx(bx,{onClick:e,children:m.jsx(Xx,{src:Yx,alt:"뒤로가기"})})})}function Jx({nextClickHandler:e,prevClickHandler:t,Funnel:n,Step:r,currentStep:i}){const{selectedCartItems:o}=Wn(),{couponsData:l}=Av(),a=Kv({coupons:l||[],selectedShoppingCartItems:o}),s=y.useMemo(()=>new Set(a.appliedCoupons.map(h=>h.id)),[a.appliedCoupons]),u=Yv(s),d=y.useMemo(()=>l==null?void 0:l.filter(h=>{var w;return(w=u.selectedCouponIds)==null?void 0:w.has(h.id)}),[l,u.selectedCouponIds]),p=bv({selectedCoupons:d,selectedShoppingCartItems:o});return m.jsxs(Jv,{children:[i===pi.SELECT_PRODUCT&&m.jsx(qv,{}),i===pi.APPLY_COUPON_AND_PAYMENT&&m.jsx(Gx,{handleGoBackToHomeButton:()=>t("구매품 선택")}),m.jsxs(n,{children:[m.jsx(r,{name:"구매품 선택",children:m.jsxs(Tt.Root,{children:[m.jsx(Tt.Loading,{}),m.jsx(Tt.Header,{}),m.jsx(Tt.Items,{})]})}),m.jsx(r,{name:"쿠폰 적용 및 결제",children:m.jsxs(Qe,{selectedCartItems:o,couponsData:l,result:p,couponSelection:u,children:[m.jsx(Qe.Header,{}),m.jsx(Qe.ItemList,{}),m.jsx(Qe.CouponSelection,{}),m.jsx(Qe.ShippingIsland,{}),m.jsx(Qe.PriceDetails,{})]})})]}),i===pi.SELECT_PRODUCT&&m.jsx(Kx,{onNext:()=>e("쿠폰 적용 및 결제")}),i===pi.APPLY_COUPON_AND_PAYMENT&&m.jsx(Qx,{selectedCartItems:o,finalPrice:p.finalTotal})]})}const Zx=300,qx=e=>{const[t,n]=y.useState(e),[r,i]=y.useState(null);return{Funnel:({children:a})=>{y.useEffect(()=>{if(!r&&t)return;i(t);const u=setTimeout(()=>i(null),Zx);return()=>clearTimeout(u)},[t]);const s=(u,d)=>{if(!u)return null;const p=a.find(h=>h.props.name===u);return p?m.jsx("div",{className:`funnel-step ${d}`,children:p},u):null};return m.jsxs("div",{className:"funnel-wrapper",children:[s(r,"exit"),s(t,"enter")]})},Step:({children:a})=>m.jsx(m.Fragment,{children:a}),setStep:n,currentStep:t}},ew=async({params:e={page:"0",size:"50"},signal:t})=>Tp("/cart-items",e,{signal:t}),tw=Ao`
+`;function Gx({handleGoBackToHomeButton:e}){return m.jsx(Ms,{children:m.jsx(bx,{onClick:e,children:m.jsx(Xx,{src:Yx,alt:"뒤로가기"})})})}function Jx({nextClickHandler:e,prevClickHandler:t,Funnel:n,Step:r,currentStep:i}){const{selectedCartItems:o}=Wn(),{couponsData:l}=Av(),a=Kv({coupons:l||[],selectedShoppingCartItems:o}),s=y.useMemo(()=>new Set(a.appliedCoupons.map(h=>h.id)),[a.appliedCoupons]),u=Yv(s),d=y.useMemo(()=>l==null?void 0:l.filter(h=>{var w;return(w=u.selectedCouponIds)==null?void 0:w.has(h.id)}),[l,u.selectedCouponIds]),p=bv({selectedCoupons:d,selectedShoppingCartItems:o});return m.jsxs(Jv,{children:[i===pi.SELECT_PRODUCT&&m.jsx(qv,{}),i===pi.APPLY_COUPON_AND_PAYMENT&&m.jsx(Gx,{handleGoBackToHomeButton:()=>t("구매품 선택")}),m.jsxs(n,{children:[m.jsx(r,{name:"구매품 선택",children:m.jsxs(Tt.Root,{children:[m.jsx(Tt.Loading,{}),m.jsx(Tt.Header,{}),m.jsx(Tt.Items,{})]})}),m.jsx(r,{name:"쿠폰 적용 및 결제",children:m.jsxs(Qe,{selectedCartItems:o,couponsData:l,result:p,couponSelection:u,children:[m.jsx(Qe.Header,{}),m.jsx(Qe.ItemList,{}),m.jsx(Qe.CouponSelection,{}),m.jsx(Qe.ShippingIsland,{}),m.jsx(Qe.PriceDetails,{})]})})]}),i===pi.SELECT_PRODUCT&&m.jsx(U1,{onNext:()=>e("쿠폰 적용 및 결제")}),i===pi.APPLY_COUPON_AND_PAYMENT&&m.jsx(Kx,{selectedCartItems:o,finalPrice:p.finalTotal})]})}const Zx=300,qx=e=>{const[t,n]=y.useState(e),[r,i]=y.useState(null);return{Funnel:({children:a})=>{y.useEffect(()=>{if(!r&&t)return;i(t);const u=setTimeout(()=>i(null),Zx);return()=>clearTimeout(u)},[t]);const s=(u,d)=>{if(!u)return null;const p=a.find(h=>h.props.name===u);return p?m.jsx("div",{className:`funnel-step ${d}`,children:p},u):null};return m.jsxs("div",{className:"funnel-wrapper",children:[s(r,"exit"),s(t,"enter")]})},Step:({children:a})=>m.jsx(m.Fragment,{children:a}),setStep:n,currentStep:t}},ew=async({params:e={page:"0",size:"50"},signal:t})=>Tp("/cart-items",e,{signal:t}),tw=Ao`
   from {
     opacity: 0;
     transform: translateX(-50%) translateY(-20px);
